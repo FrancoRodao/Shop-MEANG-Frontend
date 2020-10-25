@@ -3,14 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NotFoundComponent } from './@public/pages/not-found/not-found.component';
+import { AdminModule } from './@admin/pages/admin.module';
+import { PublicModule } from './@public/pages/public.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    PublicModule,
+    AdminModule,
+    AppRoutingModule // ALWAYS LAST FOR '**' ROUTE PATH
   ],
   providers: [],
   bootstrap: [AppComponent]
