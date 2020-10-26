@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
+  sideBarToggle: boolean = false
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  sideBar(event){
+    this.sideBarToggle = event
   }
 
 }
