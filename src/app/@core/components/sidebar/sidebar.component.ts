@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-admin-sidebar',
@@ -6,13 +7,21 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
-
-  @Input() sideBar: boolean;
+  
+  sidebarState: boolean = false
+  @Output() sideBar = new EventEmitter<boolean>();
 
   constructor() { }
   
 
   ngOnInit(): void {
+    
+  }
+
+  hover(){
+    this.sidebarState = !this.sidebarState
+    console.log(this.sidebarState)
+    this.sideBar.emit(this.sidebarState)
   }
 
 }

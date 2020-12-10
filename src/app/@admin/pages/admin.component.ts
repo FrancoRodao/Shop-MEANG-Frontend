@@ -7,15 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  sideBarToggle: boolean = false
+  sidebarState: boolean = false
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  sideBar(event){
-    this.sideBarToggle = event
+  sideBar(event: boolean){
+    this.sidebarState = event
+    console.log('sidebar on', event)
   }
 
 }

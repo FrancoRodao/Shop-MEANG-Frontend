@@ -1,26 +1,70 @@
-#sidebar-wrapper {
-  min-height: 100vh;
-  -webkit-transition: margin 0.25s ease-out;
-  -moz-transition: margin 0.25s ease-out;
-  -o-transition: margin 0.25s ease-out;
-  transition: margin 0.25s ease-out;
+a:visited, a:active, a:link, a:hover, a{
+  text-decoration: none;
+  color: #000000;
 }
 
-#sidebar-wrapper .sidebar-heading {
-  padding: 0.875rem 1.25rem;
-  font-size: 1.2rem;
+.container{
+  position: absolute;
+  background-color: #ced4da;
+  width: 100%;
+  bottom: 0;
 }
 
-#sidebar-wrapper .list-group {
-  width: 15rem;
+.container__list{
+  display: flex;
+  text-align: center;
 }
 
-.toggled {
-  margin-left: 0;
+.list__item{
+  text-decoration: none;
+  list-style: none;
+  margin: 20px auto;
 }
 
-@media (min-width: 768px) {
-  .toggled {
-    margin-left: -15rem;
+.list__item i{
+  width: 100%;
+}
+
+@media(min-width: 769px){
+  .sidebarOn{
+    max-width: 170px !important;
+  }
+
+  .sidebarOnLinkP{
+    opacity: 1 !important;
+  }
+
+  .container{
+    position: fixed;
+    max-width: 60px;
+    transition: max-width 0.5s;
+    height: 100%;
+  }
+
+  .container__list{
+    display: block;
+    text-align: start;
+  }
+
+  .list__item{
+    display: block;
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 25px;
+  }
+
+  .list__item p{
+    display: inline;
+    opacity: 0;
+    transition: all 0.25s;
+  }
+
+  .list__item i{
+    display: inline;
+    margin-right: 20px;
+  }
+
+  .list__item a:hover{
+    color: #d00000;
   }
 }

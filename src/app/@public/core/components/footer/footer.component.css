@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2B2F33;
+    color: #ffffff;
+    font-family: 'Roboto';
+}
+
+.container h3, p, a{
+    display: block;
+    padding: 10px;
+}
+
+.container a:visited, a:active, a:link{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.container a:hover{
+    transition: color 0.5s;
+    color: #d00000;
+}
+
+.container__social{
+    padding: 10px;
+}
+
+.fb{
+    margin-right: 50px;
+    color: #3b5998;
+}
+
+.tw{
+    color: #00acee;
+}
+
+i{
+    cursor: pointer;
+}

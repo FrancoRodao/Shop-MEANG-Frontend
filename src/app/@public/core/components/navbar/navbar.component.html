@@ -1,0 +1,24 @@
+<div class="container">
+  <img class="container__logo" src="assets/images/gamezonia.png" alt="logo" />
+  <nav  [ngClass]="{ showMenu: showMenu ? true : false }" class="container__navbar">
+    <ul  class="navbar__list">
+
+      <li class="list__item">Inicio</li>
+      <li class="list__item">Categoria 1</li>
+      <li class="list__item">Categoria 2</li>
+      <li class="list__item">Categoria 3</li>
+      <li class="list__item">Contacto</li>
+      <li class="list__item--search"><i class="fas fa-search"></i></li>
+      
+    </ul>
+  </nav>
+
+  <div (click)="showMenu = !showMenu" class="container__hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
+</div>
+
+<div class="separator">
+
+</div>
+

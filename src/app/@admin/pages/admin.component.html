@@ -1,20 +1,12 @@
-<div class="d-flex" id="wrapper">
+<div>
+  <!-- Sidebar -->
+  <app-admin-sidebar (sideBar)="sideBar($event)"></app-admin-sidebar>
+  <!-- Sidebar  -->
 
-    <!-- Sidebar -->
-    <app-admin-sidebar [sideBar]="sideBarToggle"></app-admin-sidebar>
-    <!-- /#sidebar-wrapper -->
-
-    <!-- Page Content -->
-    <div id="page-content-wrapper" style="width: 100%;">
-
-        <app-admin-header (sideBar)="sideBar($event)"></app-admin-header>
-
-      <div class="container-fluid">
-        <h1 class="mt-4">Simple Sidebar</h1>
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-    <!-- /#page-content-wrapper -->
-
+  <!-- Page Content -->
+  <div class="container" [ngClass]="{'sidebarOn': sidebarState}">
+    <h1>Simple Sidebar</h1>
+    <router-outlet></router-outlet>
   </div>
-
+  <!-- Page Content -->
+</div>

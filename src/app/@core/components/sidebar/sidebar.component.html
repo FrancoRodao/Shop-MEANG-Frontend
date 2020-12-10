@@ -1,14 +1,29 @@
 <!-- Sidebar -->
-<div [ngClass]="{'toggled': sideBar}" class="bg-light border-right" id="sidebar-wrapper">
-  <div class="sidebar-heading"> <a [routerLink]="['/']"> Tienda online </a> </div>
-  <div class="list-group list-group-flush">
-    <a [routerLink]="['/admin']"  class="list-group-item list-group-item-action bg-light"
-      > <i class="fas fa-columns"></i> Dashboard </a
-    >
-    <a [routerLink]="['/admin/users']" class="list-group-item list-group-item-action bg-light"
-      ><i class="fas fa-users"></i> Users </a>
-
-    
-  </div>
+<div
+  class="container"
+  [ngClass]="{ sidebarOn: sidebarState }"
+  (mouseenter)="hover()"
+  (mouseleave)="hover()"
+>
+  <ul class="container__list">
+    <li class="list__item">
+      <a [routerLink]="['/']">
+        <i class="fas fa-store"></i>
+        <p [ngClass]="{ sidebarOnLinkP: sidebarState }">Tienda</p>
+      </a>
+    </li>
+    <li class="list__item" [ngClass]="{ sidebarOnList: sidebarState }">
+      <a [routerLink]="['/admin']">
+        <i class="fas fa-columns"></i>
+        <p [ngClass]="{ sidebarOnLinkP: sidebarState }">Dashboard</p>
+      </a>
+    </li>
+    <li class="list__item" [ngClass]="{ sidebarOnList: sidebarState }">
+      <a [routerLink]="['/admin/users']"
+        ><i class="fas fa-users"></i>
+        <p [ngClass]="{ sidebarOnLinkP: sidebarState }">Users</p></a
+      >
+    </li>
+  </ul>
 </div>
-<!-- /#sidebar-wrapper -->
+<!-- Sidebar -->

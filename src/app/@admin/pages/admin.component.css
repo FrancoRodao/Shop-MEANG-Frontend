@@ -1,0 +1,13 @@
+
+
+
+@media(min-width: 769px){
+    .container{
+        margin-left: 7%;
+        transition: margin-left 0.5s;
+    }
+    
+    .sidebarOn{
+        margin-left: 18%;
+    }
+}
